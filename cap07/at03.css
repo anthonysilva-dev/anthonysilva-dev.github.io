@@ -26,3 +26,53 @@ a[href^="#"] {
 a[target="_blank"]::after {
   content: " ↗";
 }
+
+#sec-estrutural li:first-child {
+  font-weight: bold;
+}
+
+#sec-estrutural li:last-child {
+  color: darkblue;
+}
+
+#sec-estrutural li:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+#sec-estrutural li:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+#sec-estrutural li:nth-child(3) {
+  border-left: 4px solid orange;
+}
+
+input:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+
+input:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+input:required {
+  border-left: 3px solid red;
+}
+
+input:valid {
+  border-color: green;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input[type="checkbox"]:checked + label {
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #dddddd;
+}

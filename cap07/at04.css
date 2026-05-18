@@ -57,3 +57,74 @@ p {
   text-decoration: none;
   margin-right: var(--espaco-md);
 }
+
+.titulo-sticky {
+  position: sticky;
+  top: var(--altura-nav);
+  z-index: var(--z-sticky);
+  background-color: var(--cor-fundo);
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #cccccc;
+  margin-bottom: 1rem;
+}
+
+.cartao-destaque {
+  position: relative;
+  border: 1px solid #cccccc;
+  border-radius: var(--raio-borda);
+  padding: var(--espaco-lg);
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.selo {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--raio-circulo);
+  font-size: 0.8rem;
+}
+
+.btn-topo {
+  position: fixed;
+  bottom: var(--espaco-lg);
+  right: var(--espaco-lg);
+  z-index: var(--z-btn-topo);
+  background-color: var(--cor-primaria);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--raio-circulo);
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  border-bottom: 1px dashed #333333;
+}
+
+.tooltip-texto {
+  visibility: hidden;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333333;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: var(--z-tooltip);
+}
+
+.tooltip-container:hover .tooltip-texto {
+  visibility: visible;
+}

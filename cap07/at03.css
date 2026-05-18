@@ -76,3 +76,47 @@ input[type="checkbox"]:checked + label {
 button:hover {
   background-color: #dddddd;
 }
+
+.citacao::before {
+  content: "\201C";
+  font-size: 2rem;
+  color: #888888;
+}
+
+.citacao::after {
+  content: "\201D";
+  font-size: 2rem;
+  color: #888888;
+}
+
+.obrigatorio::after {
+  content: " *";
+  color: red;
+}
+
+::selection {
+  background-color: #ffdd00;
+  color: #000000;
+}
+
+.input-custom::placeholder {
+  color: #aaaaaa;
+  font-style: italic;
+}
+
+h3 + p {
+  font-size: 1.1rem;
+  color: darkgreen;
+}
+
+li:not(.ativo) {
+  opacity: 0.5;
+}
+
+li.ativo {
+  font-weight: bold;
+}
+
+li.ativo::before {
+  content: "✔ ";
+}

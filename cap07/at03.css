@@ -1,0 +1,28 @@
+a[href^="https"] {
+  color: green;
+}
+
+a[href^="http:"]:not([href^="https"])::after {
+  content: " ⚠";
+}
+
+a[href^="http:"]:not([href^="https"]) {
+  color: red;
+}
+
+a[href$=".pdf"] {
+  color: orange;
+}
+
+a[href$=".pdf"]::after {
+  content: " [PDF]";
+}
+
+a[href^="#"] {
+  color: gray;
+  font-style: italic;
+}
+
+a[target="_blank"]::after {
+  content: " ↗";
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PWEB1 — Cap. 07 — AT05 — Mini Design System</title>
+  <link rel="stylesheet" href="at05-style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Mini Design System — IFAL UI</h1>
+    <p><a href="../index.html">← Voltar para a página principal</a></p>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h2 class="hero__titulo">IFAL UI</h2>
+      <p class="hero__subtitulo">Um mini design system para estudantes de Programação Web 1</p>
+      <a href="#botoes" class="hero__cta">Ver componentes</a>
+    </section>
+
+    <section id="botoes">
+      <h2>Botões</h2>
+      <button class="btn btn--primario">Ação principal</button>
+      <button class="btn btn--secundario">Ação secundária</button>
+      <button class="btn btn--perigo">Ação destrutiva</button>
+      <button class="btn btn--primario" disabled>Desabilitado</button>
+    </section>
+
+    <section id="cards">
+      <h2>Cartão</h2>
+      <article class="card">
+        <span class="card__badge">Destaque</span>
+        <div class="card__imagem"></div>
+        <div class="card__corpo">
+          <h3 class="card__titulo">Título do card</h3>
+          <p class="card__texto">Descrição do conteúdo do card.</p>
+          <a class="card__link" href="#">Saiba mais →</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="cores">
+      <h2>Tabela de Cores</h2>
+      <table border="1">
+        <tr>
+          <th>Nome</th>
+          <th>Amostra</th>
+          <th>Código</th>
+        </tr>
+        <tr>
+          <td>Primária</td>
+          <td style="background-color: #2c3e50;"></td>
+          <td>#2c3e50</td>
+        </tr>
+        <tr>
+          <td>Secundária</td>
+          <td style="background-color: #2980b9;"></td>
+          <td>#2980b9</td>
+        </tr>
+        <tr>
+          <td>Destaque</td>
+          <td style="background-color: #f39c12;"></td>
+          <td>#f39c12</td>
+        </tr>
+        <tr>
+          <td>Sucesso</td>
+          <td style="background-color: #27ae60;"></td>
+          <td>#27ae60</td>
+        </tr>
+        <tr>
+          <td>Erro</td>
+          <td style="background-color: #e74c3c;"></td>
+          <td>#e74c3c</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="formulario">
+      <h2>Formulário</h2>
+      <form class="form">
+        <div class="form__grupo">
+          <label class="form__label" for="f-nome">Nome:</label>
+          <input class="form__input" type="text" id="f-nome" name="nome" required />
+        </div>
+        <div class="form__grupo">
+          <label class="form__label" for="f-email">E-mail:</label>
+          <input class="form__input" type="email" id="f-email" name="email" required />
+        </div>
+        <div class="form__grupo">
+          <label class="form__label" for="f-assunto">Assunto:</label>
+          <input class="form__input" type="text" id="f-assunto" name="assunto" />
+        </div>
+        <div class="form__grupo">
+          <label class="form__label" for="f-mensagem">Mensagem:</label>
+          <input class="form__input" type="text" id="f-mensagem" name="mensagem" required />
+        </div>
+        <button class="form__botao btn btn--primario" type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+</body>
+  </html>

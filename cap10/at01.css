@@ -1,0 +1,305 @@
+/* Variáveis */
+:root {
+  --cor-fundo: #141414;
+  --cor-fundo-card: #222222;
+  --cor-texto: #ffffff;
+  --cor-texto-secundario: #aaaaaa;
+  --cor-destaque: #e50914;
+  --fonte-base: Arial, sans-serif;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    --cor-fundo: #141414;
+    --cor-fundo-card: #222222;
+    --cor-texto: #ffffff;
+  }
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-base);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header - mobile first */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #000000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--cor-destaque);
+  letter-spacing: 0.05em;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header-nav a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.header-nav a:hover {
+  color: var(--cor-texto-secundario);
+}
+
+.header-btn {
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto);
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.header-btn:hover {
+  background-color: #b20710;
+}
+
+/* Hero - mobile first */
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('assets/images/breaking-bad-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid #333333;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: var(--cor-texto-secundario);
+  margin-bottom: 2rem;
+}
+
+.hero-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.hero-form input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.hero-form button {
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto);
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hero-form button:hover {
+  background-color: #b20710;
+}
+
+/* Linhas de cards - mobile first */
+.linha-cards {
+  padding: 2rem 1rem;
+}
+
+.linha-cards h2 {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.card {
+  background-color: var(--cor-fundo-card);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 0.6rem;
+}
+
+.card-info h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.card-info p {
+  font-size: 0.75rem;
+  color: var(--cor-texto-secundario);
+}
+
+.card:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s;
+}
+
+/* Benefícios - mobile first */
+.beneficios {
+  padding: 3rem 1rem;
+  border-top: 4px solid #333333;
+}
+
+.beneficios h2 {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.beneficio {
+  background-color: var(--cor-fundo-card);
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.beneficio h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.beneficio p {
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
+}
+
+/* Footer */
+.footer {
+  background-color: #000000;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--cor-texto-secundario);
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+/* Tablet - 768px */
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  .hero {
+    padding: 6rem 2rem;
+  }
+
+  .hero-form {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .hero-form input {
+    width: 300px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .beneficios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .linha-cards {
+    padding: 2rem;
+  }
+}
+
+/* Desktop - 1024px */
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero {
+    padding: 8rem 4rem;
+  }
+
+  .linha-cards {
+    padding: 2rem 4rem;
+  }
+
+  .beneficios {
+    padding: 4rem;
+  }
+}
+
+/* Tela grande - 1440px */
+@media (min-width: 1440px) {
+  .header {
+    padding: 1rem 6rem;
+  }
+
+  .linha-cards {
+    padding: 2rem 6rem;
+  }
+
+  .beneficios {
+    padding: 4rem 6rem;
+  }
+
+  .hero {
+    padding: 10rem 6rem;
+  }
+}
